@@ -157,7 +157,7 @@ ${text('PORTFOLIO  —  2026', 'label', 13, W - bx - 4, 24, { fill: t.sub, ls: 3
 // Typed and erased on a loop. SMIL rather than CSS: discrete clip-width steps
 // line up with the real glyph advances, so a proportional face types cleanly.
 function typing(t) {
-  const lines = ['student  ·  web & app developer', 'i design it, then i build it', 'currently building AmbyoAI', 'learning Go & system design']
+  const lines = ['student  ·  web & app developer', 'i design it, then i build it', 'currently building GhostMesh', 'learning Go & system design']
   const W = 1100, H = 58, size = 24, font = 'body', y = 37
   const TYPE = 0.065, ERASE = 0.028, HOLD = 1.7, GAP = 0.35
   const events = [] // [time, line, chars]

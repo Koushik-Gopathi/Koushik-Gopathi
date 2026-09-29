@@ -26,18 +26,10 @@
 
 Hi, I'm **Koushik**, a B.Tech student who builds web and mobile apps end to end, and designs the interfaces that sit on top of them.
 
-- Currently building **[AmbyoAI](https://github.com/Koushik-Gopathi/Ambyo-AI)**, offline voice-driven eye screening for community health workers
+- Currently building **GhostMesh**
 - Portfolio: **[koushik-gopathi.vercel.app](https://koushik-gopathi.vercel.app)**
 - Learning **React Native, Go and system design**
 - Fun fact: my voice assistant is called **Karen**, and she actually listens
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,flutter,dart,python,androidstudio,figma,git,vscode&perline=12&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,flutter,dart,python,androidstudio,figma,git,vscode&perline=12&theme=light" />
-    <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,flutter,dart,python,androidstudio,figma,git,vscode&perline=12" alt="TypeScript, JavaScript, React, Next.js, Tailwind, Flutter, Dart, Python, Android Studio, Figma, Git, VS Code" />
-  </picture>
-</p>
 
 <br />
 
