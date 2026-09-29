@@ -95,13 +95,11 @@ Hi, I'm **Koushik**, a B.Tech student who builds web and mobile apps end to end,
 <table>
   <tr>
     <td width="50%">
-      <a href="https://github.com/Koushik-Gopathi/Ambyo-AI">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="assets/card-1-dark.svg" />
           <source media="(prefers-color-scheme: light)" srcset="assets/card-1-light.svg" />
           <img src="assets/card-1-dark.svg" width="100%" alt="AmbyoAI" />
         </picture>
-      </a>
     </td>
     <td width="50%">
       <a href="https://github.com/Koushik-Gopathi/gaurdianmesh-threat-detection">
@@ -137,7 +135,7 @@ Hi, I'm **Koushik**, a B.Tech student who builds web and mobile apps end to end,
 
 | Project | Live | Stack |
 | --- | --- | --- |
-| [AmbyoAI](https://github.com/Koushik-Gopathi/Ambyo-AI) | — | Flutter · on-device AI · offline voice |
+| AmbyoAI | private repo | Flutter · on-device AI · offline voice |
 | [GuardianMesh](https://github.com/Koushik-Gopathi/gaurdianmesh-threat-detection) | [dashboard](https://gaurdianmesh-threat-detection.onrender.com/dashboard) | TypeScript · React |
 | [Karen](https://github.com/Koushik-Gopathi/ANVI-AI-personal-Assistant-) | — | Python · Flutter · Groq · Deepgram |
 | [Portfolio](https://github.com/Koushik-Gopathi/latest-portfolio) | [koushik-gopathi.vercel.app](https://koushik-gopathi.vercel.app) | Next.js · Tailwind · Framer Motion |

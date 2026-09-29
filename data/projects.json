@@ -5,7 +5,8 @@
       "title": "AmbyoAI",
       "description": "Offline, touchless, voice-driven amblyopia screening on a smartphone, built for community health workers.",
       "live": null,
-      "stack": "Flutter · on-device AI · offline voice"
+      "stack": "Flutter · on-device AI · offline voice",
+      "language": "Dart"
     },
     {
       "repo": "gaurdianmesh-threat-detection",

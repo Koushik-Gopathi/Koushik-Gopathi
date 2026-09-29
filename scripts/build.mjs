@@ -313,7 +313,7 @@ function projectCard(p, i) {
     let b = `<rect x=".75" y=".75" width="${W - 1.5}" height="${H - 1.5}" rx="12" fill="${t.card}" stroke="${t.line}" stroke-width="1.5"/>`
     b += `<rect x="28" y="0" width="44" height="3" fill="${RED}" class="fade"/>`
     b += text(String(i + 1).padStart(2, '0'), 'label', 13, 28, 44, { fill: RED, ls: 2, cls: 'up' })
-    b += text(`${USER} / ${p.repo}`, 'body', 13, 64, 44, { fill: t.sub, cls: 'up', delay: 0.05 })
+    b += text(p.private ? 'private repository' : `${USER} / ${p.repo}`, 'body', 13, 64, 44, { fill: t.sub, cls: 'up', delay: 0.05 })
     b += text(p.title, 'display', 32, 28, 92, { fill: t.fg, ls: 1, cls: 'up', delay: 0.1 })
     wrap(p.description, 'body', 16, W - 60, 3).forEach((l, k) => { b += text(l, 'body', 16, 28, 128 + k * 23, { fill: t.sub, cls: 'up', delay: 0.2 + k * 0.05 }) })
     b += `<line x1="28" y1="208" x2="${W - 28}" y2="208" stroke="${t.line}"/>`
@@ -323,14 +323,18 @@ function projectCard(p, i) {
       b += text(p.language, 'body', 14, x + 18, 237, { fill: t.fg, cls: 'up', delay: 0.35 })
       x += 18 + measure(p.language, 'body', 14) + 22
     }
+    if (!p.private) {
     b += `<path d="${starPath(x + 7, 231, 7)}" fill="none" stroke="${t.sub}" stroke-width="1.4" stroke-linejoin="round" class="up" style="animation-delay:.4s"/>`
     b += text(fmt(p.stars), 'body', 14, x + 20, 237, { fill: t.fg, cls: 'up', delay: 0.4 })
     x += 20 + measure(fmt(p.stars), 'body', 14) + 22
     b += `<g class="up" style="animation-delay:.45s">${forkIcon(x + 6, 231, t.sub)}</g>`
     b += text(fmt(p.forks), 'body', 14, x + 18, 237, { fill: t.fg, cls: 'up', delay: 0.45 })
-    const cta = p.live ? 'LIVE' : 'REPO'
-    b += text(cta, 'label', 12, W - 50, 237, { fill: RED, ls: 2, anchor: 'end', cls: 'up', delay: 0.5 })
+    }
+    if (p.private) b += text('PRIVATE', 'label', 12, W - 28, 237, { fill: t.sub, ls: 2, anchor: 'end', cls: 'up', delay: 0.5 })
+    else {
+    b += text(p.live ? 'LIVE' : 'REPO', 'label', 12, W - 50, 237, { fill: RED, ls: 2, anchor: 'end', cls: 'up', delay: 0.5 })
     b += `<path d="M${W - 42} 238l12-12M${W - 38} 226h8v8" fill="none" stroke="${RED}" stroke-width="2" class="up" style="animation-delay:.5s"/>`
+    }
     return svg(W, H, b, { fonts: ['label', 'body', 'display'], title: `${p.title}: ${p.description}` })
   }
 }
@@ -377,7 +381,8 @@ write('stats', statTiles([
 const byName = Object.fromEntries(own.map(r => [r.name, r]))
 read('data/projects.json').projects.forEach((p, i) => {
   const r = byName[p.repo]
-  if (!r) throw new Error(`projects.json: no public repo named ${p.repo}`)
-  write(`card-${i + 1}`, projectCard({ ...p, language: r.language, stars: r.stargazers_count, forks: r.forks_count }, i))
+  // A private repo still gets a card, just without live numbers or a link.
+  const live = r ? { language: r.language, stars: r.stargazers_count, forks: r.forks_count } : { private: true }
+  write(`card-${i + 1}`, projectCard({ ...p, ...live, language: live.language ?? p.language }, i))
 })
 console.log(`\n${st.total} contributions · streak ${st.current}/${st.longest} · ${own.length} repos · languages: ${top.map(([k]) => k).join(', ')}`)
