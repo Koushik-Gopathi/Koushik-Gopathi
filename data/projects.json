@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "repo": "Ambyo-AI",
+      "title": "AmbyoAI",
+      "description": "Offline, touchless, voice-driven amblyopia screening on a smartphone, built for community health workers.",
+      "live": null,
+      "stack": "Flutter · on-device AI · offline voice"
+    },
+    {
+      "repo": "gaurdianmesh-threat-detection",
+      "title": "GuardianMesh",
+      "description": "Scores traffic between AI agents and MCP servers for prompt injection, exfiltration and leaked secrets, in the browser.",
+      "live": "https://gaurdianmesh-threat-detection.onrender.com/dashboard",
+      "stack": "TypeScript · React"
+    },
+    {
+      "repo": "ANVI-AI-personal-Assistant-",
+      "title": "Karen",
+      "description": "A hands-free voice agent for Windows and Android that actually does things: runs commands, files, reminders.",
+      "live": null,
+      "stack": "Python · Flutter · Groq · Deepgram"
+    },
+    {
+      "repo": "latest-portfolio",
+      "title": "Portfolio",
+      "description": "Graph paper, torn sheets and red ink. My portfolio, built with Next.js 15, Tailwind v4 and Framer Motion.",
+      "live": "https://koushik-gopathi.vercel.app",
+      "stack": "Next.js · Tailwind · Framer Motion"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "SKILL RADAR",
+  "subtitle": "self-rated",
+  "axes": [
+    { "label": "Frontend", "value": 82 },
+    { "label": "UI / UX", "value": 80 },
+    { "label": "Flutter", "value": 76 },
+    { "label": "TypeScript", "value": 72 },
+    { "label": "Python", "value": 66 },
+    { "label": "Backend / APIs", "value": 58 },
+    { "label": "Motion", "value": 70 }
+  ]
+}
